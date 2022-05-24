@@ -9,9 +9,11 @@ const app = express();
 const db = mongoose.connection;
 
 //Port
-
 // Allow use of Heroku's port or your own local port, depending on the environment
 const PORT = process.env.PORT || 3000;
+
+// Database configuration
+const DATABASE_URL = "mongodb+srv://admin:abc1234@cluster0.b8vyj.mongodb.net/tweeter?retryWrites=true&w=majority";
 
 //Database
 // How to connect to the database either via heroku or locally
