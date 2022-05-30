@@ -1,60 +1,53 @@
-
+// CONNECTS HIDDEN .ENV FILE
 require('dotenv').config()
 
-//Dependencies
+// DEPENDENCIES
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
+const entriesController = require('./controllers/entries.js');
 
-//Port
-// Allow use of Heroku's port or your own local port, depending on the environment
+// ALLOWS HEROKU'S PORT OR LOCAL PORT
 const PORT = process.env.PORT || 3000;
 
-// Database configuration
-const DATABASE_URL = "mongodb+srv://admin:abc1234@cluster0.b8vyj.mongodb.net/tweeter?retryWrites=true&w=majority";
+// MONGODB DATABASE CONNECTION
+const DATABASE_URL = "mongodb+srv://admin:abc1234@cluster0.b8vyj.mongodb.net/travelmoire?retryWrites=true&w=majority";
 
-//Database
-// How to connect to the database either via heroku or locally
+// DATABASE CONNECTION VIA HEROKU OR LOCALLY
 const MONGODB_URI = process.env.MONGODB_URI;
 
-// Connect to Mongo &
-// Fix Depreciation Warnings from Mongoose
-// May or may not need these depending on your Mongoose version
+// CONNECT TO MONGO AND FIX DEPRECIATION WARNINGS FROM MONGOOSE
 mongoose.connect(MONGODB_URI , { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
-// Error / success
+// DATABASE CONNECTION ERROR / SUCCESS
 db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
 db.on('connected', () => console.log('mongod connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongod disconnected'));
 
-//___________________
-//Middleware
-//___________________
+// MIDDLEWARE
+app.use(methodOverride('_methos'));
+app.use(express.urlencoded({ extended: false}));
+app.use('/entries', entriesController);
 
-//use public folder for static assets
+// ADDS MIDDLEWARE FOR SERVING STATIC FILES TO EXPRESS
 app.use(express.static('public'));
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
 
-//use method override
+// USES METHOD OVERRIDE
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 
-//___________________
-// Routes
-//___________________
-//localhost:3000
+// ROUTES
 app.get('/' , (req, res) => {
   res.send('Hello World!');
 });
 
-//___________________
-//Listener
-//___________________
+// LISTENER
 app.listen(PORT, () => console.log('express is listening on:', PORT));
 
