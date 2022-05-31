@@ -27,7 +27,7 @@ router.get("/", (req, res) => {
   // CREATE
   router.post("/", (req, res) => {
     User.create(req.body, (err, createdUser) => {
-      res.redirect("/users");
+      res.redirect("/users/show.ejs");
     });
   });
   
