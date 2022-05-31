@@ -12,11 +12,12 @@
 <main>
     <ul>
         <% for(let i = 0; i < entries.length; i++){ %>
-        <li>
-            <a href="/entries/<%= entries[i]._id %>"><%= entries[i].title %></a>
-        </li>
+        
+            <a href="/entries/<%= entries[i]._id %>"><%= entries[i].location %></a>
+            <br><a href="/entries/<%= entries[i]._id %>"><%= entries[i].image %></a>
         <% } %>
     </ul>
+    
 </main>
 </body>
 </html>

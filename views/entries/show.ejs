@@ -8,19 +8,20 @@
   </head>
   <body>
     <header>
-      <h1>Show page for <%= entry.title %></h1>
+      <h1><%= entry.location %></h1>
     <nav> 
     <ul>
-    <li>Title: <%= entry.title %></li>
-    <li>Body: <%= entry.body %></li>
-    <li>Image: <%= entry.image %></li>
+    Title: <%= entry.title %><br>
+    Body: <%= entry.body %><br>
+    Image: <%= entry.image %>
     </ul>
     <section>
       <form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete Entry" />
+        <input type="submit" value="Delete" />
       </form>
       <section>
-      <a href="/entries/<%= entry._id %>/edit"></a>
+      <a href="/entries/<%= entry._id %>/edit">Edit</a>
+    
     </section>
 </nav>
 </header>

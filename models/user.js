@@ -5,15 +5,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // INITIALIZE SCHEMA
-const entrySchema = new Schema({
-    location: String,
-    title: String,
-    body: String,
-    image: String
+const userSchema = new Schema({
+    username: String,
+    email: String,
+    password: String,
 })
 
 // CREATE MODEL
-const Entry = mongoose.model('Entry', entrySchema);
+const User = mongoose.model('User', userSchema);
 
 // EXPORT OUR MODEL
-module.exports = Entry;
+module.exports = User;

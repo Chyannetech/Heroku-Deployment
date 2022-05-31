@@ -8,6 +8,7 @@ const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
 const entriesController = require('./controllers/entries.js');
+const usersController = require('./controllers/users.js');
 
 
 
@@ -30,9 +31,10 @@ db.on('connected', () => console.log('mongod connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongod disconnected'));
 
 // MIDDLEWARE AND BODYPARSER
-app.use(methodOverride('_methos'));
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false}));
 app.use('/entries', entriesController);
+app.use('/users', usersController);
 
 
 // ADDS MIDDLEWARE FOR SERVING STATIC FILES TO EXPRESS

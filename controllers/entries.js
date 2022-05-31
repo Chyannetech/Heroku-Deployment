@@ -21,7 +21,7 @@ router.get("/new", (req, res) => {
 
 // DELETE
 router.delete("/:id", (req, res) => {
-  Entry.findByIdAndDelete(req.params.id, () => {
+  Entry.findByIdAndDelete(req.params.id, (err, deletedEntry) => {
     res.redirect("/entries");
   });
 });

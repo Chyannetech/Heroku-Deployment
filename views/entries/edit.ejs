@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TravelMoire</title>
-</head>
-<body>
-    <form action="/entries/<%= entry._id %>?_method=PUT" methos="POST">
-        <input type="text" name="name" value="<%= entry.title %>" /><br />
+  </head>
+  <body>
+    <header>
+      <h1>Edit <%= entry.location %>'s Info</h1>
+      <ul>
+        <a href="/">Home</a>
+      </ul>
+      <ul>
+        <a href="/entries">View All Entries</a>
+      </ul>
+    </header>
+    <main>
+      <form action="/entries/<%= entry._id %>?_method=PUT" methos="POST">
+        <input type="text" name="location" value="<%= entry.location %>" />
         <input type="submit" value="Update Entry" />
-    </form>
-</body>
+            
+      </form>
+    </main>
+  </body>
 </html>
