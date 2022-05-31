@@ -6,17 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TravelMoire</title>
 </head>
-<h1>Your Experiences</h1>
 <body>
-    
-<main>
-    <ul>
-        <% for(let i = 0; i < entries.length; i++){ %>
-        <li>
-            <a href="/entries/<%= entries[i]._id %>"><%= entries[i].title %></a>
-        </li>
-        <% } %>
-    </ul>
-</main>
+    <form action="/entries/<%= entry._id %>?_method=PUT" methos="POST">
+        <input type="text" name="name" value="<%= entry.title %>" /><br />
+        <input type="submit" value="Update Entry" />
+    </form>
 </body>
 </html>

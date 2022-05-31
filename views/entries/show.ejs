@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelMoire</title>
+  </head>
+  <body>
+    <header>
+      <h1>Show page for <%= entry.title %></h1>
+    <nav> 
+    <ul>
+    <li>Title: <%= entry.title %></li>
+    <li>Body: <%= entry.body %></li>
+    <li>Image: <%= entry.image %></li>
+    </ul>
+    <section>
+      <form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Entry" />
+      </form>
+      <section>
+      <a href="/entries/<%= entry._id %>/edit"></a>
+    </section>
+</nav>
+</header>
+</body>
+</html>

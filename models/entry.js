@@ -6,10 +6,9 @@ const Schema = mongoose.Schema;
 
 // INITIALIZE SCHEMA
 const entrySchema = new Schema({
-    name: String,
     title: String,
     body: String,
-    imageUrl: String
+    image: String
 })
 
 // CREATE MODEL

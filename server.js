@@ -9,6 +9,8 @@ const app = express();
 const db = mongoose.connection;
 const entriesController = require('./controllers/entries.js');
 
+
+
 // ALLOWS HEROKU'S PORT OR LOCAL PORT
 const PORT = process.env.PORT || 3000;
 
@@ -27,10 +29,11 @@ db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
 db.on('connected', () => console.log('mongod connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongod disconnected'));
 
-// MIDDLEWARE
+// MIDDLEWARE AND BODYPARSER
 app.use(methodOverride('_methos'));
 app.use(express.urlencoded({ extended: false}));
 app.use('/entries', entriesController);
+
 
 // ADDS MIDDLEWARE FOR SERVING STATIC FILES TO EXPRESS
 app.use(express.static('public'));
@@ -42,10 +45,9 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 // USES METHOD OVERRIDE
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
-
-// ROUTES
+// HOME PAGE ROUTE
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  res.render('index.ejs');
 });
 
 // LISTENER
