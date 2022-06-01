@@ -46,11 +46,11 @@ router.post("/", (req, res) => {
 // 5. We will save the secure url in database
 
 
-const photo = req.files.myImage;
+const photo = req.files.img;
 photo.mv(`./uploads/${photo.name}`);
 cloudinary.uploader.upload(`./uploads/${photo.name}`).then(result => {
     // console.log(result);
-    req.body.myImage = result.secure_url;
+    req.body.img = result.secure_url;
     Entry.create(req.body, (err, createdEntry) => {
         res.redirect("/entries");
     });

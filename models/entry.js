@@ -10,11 +10,7 @@ const entrySchema = new Schema({
     date: Date,
     title: String,
     body: String,
-    img: 
-    {
-        data: Buffer,
-        contentType: String
-    }
+    img: String
 });
 
 // CREATE MODEL

@@ -8,13 +8,11 @@ const Schema = mongoose.Schema;
 const imageSchema = new mongoose.Schema({
     name: String,
     desc: String,
-    img: 
-    {
-        data: Buffer,
-        contentType: String
-    }
+    img: String
 });
 
+// CREATE MODEL
+const Img = mongoose.model('Img', imgSchema);
 
 // EXPORT OUR MODEL
 module.exports = Entry;
