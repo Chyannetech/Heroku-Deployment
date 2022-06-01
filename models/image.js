@@ -5,11 +5,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // INITIALIZE SCHEMA
-const entrySchema = new Schema({
-    location: String,
-    date: Date,
-    title: String,
-    body: String,
+const imageSchema = new mongoose.Schema({
+    name: String,
+    desc: String,
     img: 
     {
         data: Buffer,
@@ -17,9 +15,6 @@ const entrySchema = new Schema({
     }
 });
 
-// CREATE MODEL
-const Entry = mongoose.model('Entry', entrySchema);
-
 
 // EXPORT OUR MODEL
-module.exports = Entry;
+module.exports = new mongoose.model('Image', imageSchema);

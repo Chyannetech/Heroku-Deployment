@@ -8,18 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>Create New Post</h1>
         <a href="/">Home</a>
+        <a href="/entries">View All</a>
+        <h1>Create New Experience</h1>
     </header>
     <main>
         <div class="newContainer"> 
-    <form action="/entries", method="POST"> 
+            <form action="/entries", method="POST"> 
+            </div>
+            <div class="field"> 
+           <label for="date">Date</label><br>
+           <input type="date" name="date" /></div>
 
-    </div>
-    <div class="field"> 
-       <label for="location">City and State</label><br>
-       <input type="text" name="location" placeholder="Add a Location" />
-    </div>
+           
+        <div class="newContainer"> 
+        <form action="/entries", method="POST"> 
+        </div>
+        <div class="field"> 
+       <label for="location">Location</label><br>
+       <input type="text" name="location" placeholder="Add a Location" /></div>
 
 
     <div class="field"> 
@@ -30,14 +37,12 @@
        <label for="body">Description</label><br>
         <textarea name="body" cols="30" rows="10" placeholder="Share your travel experience"></textarea>
     </div>
-    <div class="field"> 
-        <label for="image">Images</label><br>
-        <input type="formaction" name="image" placeholder="Upload Media" /><br>
-    <div> 
-        <br><button type="submit">Publish Experience</button>
-    </div>
-</form>
-</div>
+<!--------------------Multar/Image Uploader Form------------------>
+<form action="/uploadmultiple" method="post" enctype="multipart/form-data">
+<input type="file" name="myImage" accept='image' multiple />
+        <br><input type="submit" value="Publish Experience" />
+    </form>
     </main>
+
 </body>
 </html>

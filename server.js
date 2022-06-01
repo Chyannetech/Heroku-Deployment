@@ -9,6 +9,7 @@ const app = express();
 const db = mongoose.connection;
 const entriesController = require('./controllers/entries.js');
 const usersController = require('./controllers/users.js');
+const cloudinary = require('cloudinary');
 
 
 
@@ -31,10 +32,17 @@ db.on('connected', () => console.log('mongod connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongod disconnected'));
 
 // MIDDLEWARE AND BODYPARSER
+cloudinary.config({ 
+  cloud_name: 'travelmoire', 
+  api_key: '457224277242579', 
+  api_secret: 'osK800bo_9k_m2nO2bne9r9vQaY' 
+});
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false}));
 app.use('/entries', entriesController);
 app.use('/users', usersController);
+
+
 
 
 // ADDS MIDDLEWARE FOR SERVING STATIC FILES TO EXPRESS
@@ -51,6 +59,8 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 app.get('/' , (req, res) => {
   res.render('index.ejs');
 });
+
+
 
 // LISTENER
 app.listen(PORT, () => console.log('express is listening on:', PORT));

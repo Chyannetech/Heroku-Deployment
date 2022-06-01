@@ -8,18 +8,18 @@
   </head>
   <body>
     <header>
-      <h1>Edit <%= entry.location %>'s Info</h1>
-      <ul>
         <a href="/">Home</a>
-      </ul>
+      <h1>Edit <%= entry.location %>'s Info</h1>
       <ul>
         <a href="/entries">View All Entries</a>
       </ul>
     </header>
     <main>
-      <form action="/entries/<%= entry._id %>?_method=PUT" method="POST">
-        <input type="text" name="location" value="<%= entry.location%> " />
-        <input type="submit" value="Update Entry" />
+      <form action="/entries<%= entry._id %>?_method=PUT" method="POST">
+        <input type="date" name="date" value="<%= entry.date%> "/>
+        <br><input type="text" name="location" value="<%= entry.location%> "/>
+        <br><input type="text" name="body" value="<%= entry.body%> "/>
+        <br><input type="submit" value="Update Entry" />
             
       </form>
     </main>

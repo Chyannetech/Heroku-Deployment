@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TravelMoire</title>
-</head>
-<h1>Your Experiences</h1>
-<body>
-    
-<main>
-    <ul>
+  </head>
+  <h5><a href="/">Home</a></h5>
+  <h1>Your Experiences</h1>
+  <body>
+    <header></header>
+    <main>
+      <ul>
         <% for(let i = 0; i < entries.length; i++){ %>
-        
-            <a href="/entries/<%= entries[i]._id %>"><%= entries[i].location %></a>
-            
+
+        <a href="/entries/<%= entries[i]._id %>"><%= entries[i].location %></a>
+
         <% } %>
-    </ul>
-    
-</main>
-</body>
+      </ul>
+    </main>
+        <h5><a href="/entries/new">Create New Post</a></h5>
+  </body>
 </html>

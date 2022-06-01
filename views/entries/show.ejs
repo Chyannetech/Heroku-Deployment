@@ -8,13 +8,18 @@
   </head>
   <body>
     <header>
+        <a href="/">Home</a>
       <h1><%= entry.location %></h1>
+      <h6>Date: <%= entry.date %></h6><br>
     <nav> 
     <ul>
     Title: <%= entry.title %><br>
-    Body: <%= entry.body %><br>
-    Image: <%= entry.image %>
+    <%= entry.body %><br>
+    <%= entry.img %><br>
     </ul>
+
+
+    <!-- Edit and Delete Post -->
     <section>
       <form action="/entries/<%= entry._id %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete" />
