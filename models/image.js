@@ -17,4 +17,4 @@ const imageSchema = new mongoose.Schema({
 
 
 // EXPORT OUR MODEL
-module.exports = new mongoose.model('Image', imageSchema);
+module.exports = Entry;
