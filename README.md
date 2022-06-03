@@ -1,7 +1,7 @@
 #TravelMoire
 
 #### TravelMoire is a web application that allows users to document there travel experiences. 
-!(/images/HomePage.png)
+<img width="640" alt="HomePage" src="https://user-images.githubusercontent.com/103911002/171841959-14fbb1dc-5807-434d-b200-29b17dd4ff05.png">
 
 ## Description
 TravelMoire is my first full CRUD project. My friends and I love to travel so this app is focused on building a database to store and share our memories through pictures and text. 
