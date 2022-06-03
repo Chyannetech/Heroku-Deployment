@@ -5,13 +5,20 @@
  <%- include('../views/partials/header')%>
 <!---------------------Home page ---------------------->
 <body>
+    <h2>Your Fabulous Adventure Awaits...</h2>
 <!--------------------------Gif ----------------------->
 <div id="gifindex"><img src="https://media.giphy.com/media/1wPWOI4OktKtKL1qMs/giphy.gif" alt="travel" /></div>
 
-
-    <nav>
-        <a href="/entries">View Your Experiences</a><br>
-        <a href="/entries/New">Add A New Experience</a>
+<!-------------------Buttons on Homepage------------->
+    <nav class ="buttons">
+    <ul>   
+    <form method="get" action="/entries/New">
+        <button type="submit">Add A New Experience</button>
+        </form>
+    <form method="get" action="/entries">
+        <button type="submit">View Your Experience</button>
+    </form>
+    </ul>
     </nav>
 </body>
 <%- include('./partials/footer')%>

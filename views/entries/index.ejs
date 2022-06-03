@@ -7,13 +7,12 @@
       <h2>Your Experiences</h2>
       <ul>
         <% for(let i = 0; i < entries.length; i++){ %>
-
-        <a href="/entries/<%= entries[i]._id %>"><%= entries[i].location %></a>
-
-        <% } %>
+      </ul>
+      <ul> 
+    <a href="/entries/<%= entries[i]._id %>"><%= entries[i].location %></a><% } %>
       </ul>
     </main>
-    <h5><a href="/entries/new">Create New Post</a></h5>
+    <h4><a href="/entries/new">Create New Post</a></h4>
   </body>
   <%- include('../partials/footer.ejs')%>
 </html>
