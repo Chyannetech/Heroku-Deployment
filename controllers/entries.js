@@ -31,8 +31,14 @@ router.delete("/:id", (req, res) => {
 
 // UPDATE
 router.put("/:id", (req, res) => {
-  Entry.findByIdAndUpdate(req.params.id, req.body, () => {
-    res.redirect("/entries");
+  Entry.findByIdAndUpdate(
+      req.params.id, 
+      req.body, 
+      {
+        new:true
+      },
+    (error, updatedEntry) => {
+    res.redirect(`/entries/${req.params.id}`)
   });
 });
 
@@ -46,7 +52,7 @@ router.post("/", (req, res) => {
 // 5. We will save the secure url in database
 const photo = req.files.img;
 photo.mv(`./uploads/${photo.name}`);
-cloudinary.uploader.upload(`./uploads/${photo.name}`).then(result => {
+cloudinary.uploader.upload(`./uploads/${photo.name}`).then(result =>        {
     // console.log(result);
     req.body.img = result.secure_url;
     Entry.create(req.body, (err, createdEntry) => {

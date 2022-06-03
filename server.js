@@ -12,8 +12,6 @@ const usersController = require('./controllers/users.js');
 const cloudinary = require('cloudinary');
 const expressFileUpload = require('express-fileupload');
 
-
-
 // ALLOWS HEROKU'S PORT OR LOCAL PORT
 // const PORT = process.env.PORT || 3000;
 const { PORT = 3000, API_KEY, API_SECRET, CLOUD_NAME } = process.env;
@@ -49,9 +47,6 @@ app.use(express.urlencoded({ extended: false}));
 app.use('/entries', entriesController);
 app.use('/users', usersController);
 
-
-
-
 // ADDS MIDDLEWARE FOR SERVING STATIC FILES TO EXPRESS
 app.use(express.static('public'));
 
@@ -66,8 +61,6 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 app.get('/' , (req, res) => {
   res.render('index.ejs');
 });
-
-
 
 // LISTENER
 app.listen(PORT, () => console.log('express is listening on:', PORT));

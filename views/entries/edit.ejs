@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- ------------------Partials------------------ -->
-    <%- include('../partials/head.ejs')%>
-    <%- include('../partials/header.ejs')%>
-    <body> 
+  <%- include('../partials/head.ejs')%> <%- include('../partials/header.ejs')%>
+  <body>
     <main>
+      <!-------------Select By Location to Edit---------->
       <ul>
         <h1>Edit <%= entry.location %>'s Info</h1>
       </ul>
-    <!------------------- Edit Form -------------------->
-      <form action="/entries<%= entry._id %>?_method=PUT" method="POST">
+      <!------------------- Edit Form -------------------->
+      <form action="/entries/<%= entry._id %>?_method=PUT" method="POST">
         <input type="date" name="date" value="<%= entry.date%> " />
         <br />
         <input type="text" name="location" value="<%= entry.location%> " />
@@ -17,9 +17,8 @@
         <br /><input type="text" name="body" value="<%= entry.body%> " />
         <br /><input type="submit" value="Update Entry" />
       </form>
-     
     </main>
   </body>
- <!------------- Footer Partial ---------------->
- <%- include('../partials/footer.ejs')%>
+  <!------------- Footer Partial ---------------->
+  <%- include('../partials/footer.ejs')%>
 </html>

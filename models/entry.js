@@ -1,10 +1,10 @@
-// REQUIRE DEPENDENCIES
+// REQUIRES DEPENDENCIES
 const mongoose = require('mongoose');
 
-// INITIALIZE SHORTCUT VARIABLE
+// INITIALIZES SHORTCUT VARIABLE
 const Schema = mongoose.Schema;
 
-// INITIALIZE SCHEMA
+// INITIALIZES SCHEMA
 const entrySchema = new Schema({
     location: String,
     date: Date,
@@ -13,7 +13,7 @@ const entrySchema = new Schema({
     img: String
 });
 
-// CREATE MODEL
+// CREATES MODEL
 const Entry = mongoose.model('Entry', entrySchema);
 
 

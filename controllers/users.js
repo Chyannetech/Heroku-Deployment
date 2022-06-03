@@ -19,9 +19,24 @@ router.get("/", (req, res) => {
   });
   
   // DELETE
+  router.delete("/:id", (req, res) => {
+    User.findByIdAndDelete(req.params.id, (err, userEntry) => {
+      res.redirect("/users");
+    });
+  });
   
   
   // UPDATE
+router.put("/:id", (req, res) => {
+    User.findByIdAndUpdate(
+        req.params.id, 
+        req.body, {
+            new: true,
+        },
+        (err, updatedEntry) => {
+      res.redirect(`/users/${req.params.id}`);
+    })
+  });
  
   
   // CREATE
@@ -32,6 +47,13 @@ router.get("/", (req, res) => {
   });
   
   // EDIT
+router.get("/:id/edit", (req, res) => {
+    User.findById(req.params.id, (error, foundUser) => {
+      res.render("users/edit.ejs", {
+        user: foundUser,
+      });
+    });
+  });
   
   
   // SHOW

@@ -9,4 +9,23 @@
     </header>
    
 </body>
+    <!-- Displays username -->
+    <nav>
+        <h1> Username: <%= users.username %></h1>
+      <h4>Email: <%= users.email %></h4>
+      <br />
+    </nav>
+
+      <!-- Delete Option -->
+      <section>
+        <form action="/users/<%= user._id %>?_method=DELETE" method="POST">
+          <input type="submit" value="Delete" />
+        </form>
+        <form>
+          <a href="/edit.ejs user._id %>/user">Edit</a>
+        </form>
+      </section>
+    </nav>
+  </body>
+  <%- include('../partials/footer.ejs')%>
 </html>
