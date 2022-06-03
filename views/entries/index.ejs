@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <%- include('../partials/head.ejs')%>
- 
 <%- include('../partials/header.ejs')%>
   <body>
     <main>
-      <h3>Your Experiences</h3>
+      <h2>Your Experiences</h2>
       <ul>
         <% for(let i = 0; i < entries.length; i++){ %>
 
@@ -17,5 +15,5 @@
     </main>
     <h5><a href="/entries/new">Create New Post</a></h5>
   </body>
-  <footer><%- include('../partials/footer.ejs')%></footer>
+  <%- include('../partials/footer.ejs')%>
 </html>
