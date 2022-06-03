@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head.ejs')%>
-<%- include('../partials/header.ejs')%>
+  <%- include('../partials/head.ejs')%> <%- include('../partials/header.ejs')%>
   <body>
     <main>
       <h2>Your Experiences</h2>
+      <!-- Shows Experiences/Entrees in a list as they are posted -->
       <ul>
         <% for(let i = 0; i < entries.length; i++){ %>
       </ul>
-      <ul> 
-    <a href="/entries/<%= entries[i]._id %>"><%= entries[i].location %></a><% } %>
+      <ul>
+        <!-- Grabs Entrees by ID and categorizes by location -->
+        <a href="/entries/<%= entries[i]._id %>"><%= entries[i].location %></a
+        ><% } %>
       </ul>
     </main>
     <h4><a href="/entries/new">Create New Post</a></h4>
   </body>
+  <!------------- Footer Partial ---------------->
   <%- include('../partials/footer.ejs')%>
 </html>

@@ -44,8 +44,6 @@ router.post("/", (req, res) => {
 // 3. Cloudinary will upload the image to the cloud
 // 4. In exchange for that image we are given a secure URL
 // 5. We will save the secure url in database
-
-
 const photo = req.files.img;
 photo.mv(`./uploads/${photo.name}`);
 cloudinary.uploader.upload(`./uploads/${photo.name}`).then(result => {
