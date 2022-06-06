@@ -1,9 +1,8 @@
 const express = require("express");
-const { append } = require("express/lib/response");
 const router = express.Router();
 const Entry = require("../models/entry.js");
-const cloudinary = require('cloudinary');
-const expressFileUpload = require('express-fileupload');
+// const cloudinary = require('cloudinary');
+// const expressFileUpload = require('express-fileupload');
 
 
 //////////////////DEFINE ROUTES/////////////////
@@ -16,6 +15,8 @@ router.get("/", (req, res) => {
     });
   });
 });
+
+
 
 // NEW
 router.get("/new", (req, res) => {
@@ -50,16 +51,16 @@ router.post("/", (req, res) => {
 // 3. Cloudinary will upload the image to the cloud
 // 4. In exchange for that image we are given a secure URL
 // 5. We will save the secure url in database
-const photo = req.files.img;
-photo.mv(`./uploads/${photo.name}`);
-cloudinary.uploader.upload(`./uploads/${photo.name}`).then(result =>        {
-    // console.log(result);
-    req.body.img = result.secure_url;
+// const photo = req.files.img;
+// photo.mv(`./uploads/${photo.name}`);
+// cloudinary.uploader.upload(`./uploads/${photo.name}`).then(result =>        {
+    // req.body.img = result.secure_url;
+    // res.send(req.body)
     Entry.create(req.body, (err, createdEntry) => {
         res.redirect("/entries");
     });
   });
-});
+// });
 
 // EDIT
 router.get("/:id/edit", (req, res) => {

@@ -9,8 +9,7 @@ const entrySchema = new Schema({
     location: String,
     date: Date,
     title: String,
-    body: String,
-    img: String
+    body: String
 });
 
 // CREATES MODEL
