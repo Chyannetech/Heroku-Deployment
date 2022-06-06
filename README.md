@@ -22,12 +22,12 @@ TravelMoire is my first full CRUD project. My friends and I love to travel so th
 * Express.js
 * Node
 
-## Feautures
+## Features
 * This app is capable of creating, reading, editing, adding, and deleteing data.
 * Data is stored in collections using Postman and MongoDB.
 
 ## Sketches
-* A wirefram was created using Invision and I will continue updating the app until final layout goals are met.
+* A wireframe was created using Invision and I will continue updating the app until final layout goals are met.
 ![TRAVELMOIRE WIREFRAME](https://user-images.githubusercontent.com/103911002/172105053-0616ad60-e4c1-471f-8e84-ef0a5e1e899b.png)
 
 * Link to Trello: [Trello] https://trello.com/b/GGfcbJtX/travelmoire
