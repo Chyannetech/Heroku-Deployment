@@ -28,6 +28,7 @@ TravelMoire is my first full CRUD project. My friends and I love to travel so th
 
 ## Sketches
 * A wirefram was created using Invision and will continue being updated to improve appearance and functionality.
+![TRAVELMOIRE WIREFRAME](https://user-images.githubusercontent.com/103911002/172105053-0616ad60-e4c1-471f-8e84-ef0a5e1e899b.png)
 
 * Link to Trello: [Trello] https://trello.com/b/GGfcbJtX/travelmoire
 
