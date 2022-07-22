@@ -31,6 +31,7 @@
 * Expand CSS
 
 #### Follow the progress of TravelMoire [HERE.](https://trello.com/b/GGfcbJtX/travelmoire)
+#### Check out the prototype for it [HERE.](https://www.figma.com/proto/L3GojFGEw3TJUp6xIckAXQ/TRAVEL-%7C-MOIRE?node-id=0%3A1)
 
 ## Deployment [Project URL] 
 #### View the deployed app [HERE.](https://travelmoire.herokuapp.com/)
