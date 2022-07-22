@@ -1,10 +1,7 @@
 #TravelMoire
 
-#### TravelMoire VZ.1 is a web application that allows users to document their travel experiences. 
+#### TravelMoire is my first full CRUD project that was created to motivate people to explore the world and travel more -- while also having a safe place to document their experience.
 <img width="640" alt="HomePage" src="https://user-images.githubusercontent.com/103911002/171841959-14fbb1dc-5807-434d-b200-29b17dd4ff05.png">
-
-## Description
-TravelMoire is my first full CRUD project. My friends and I love to travel so this app is focused on building a database to store and share our memories.
 
 ## Technologies Used
 * JavaScript 
@@ -13,24 +10,28 @@ TravelMoire is my first full CRUD project. My friends and I love to travel so th
 * Google Fonts
 * MongoDB
 * Mongoose
+* Postman
 * Express.js
 * Node
 
 ## Features
 * This app is capable of creating, reading, editing, adding, and deleteing data.
-* Data is stored in collections using Postman and MongoDB.
+* Data is stored in collections using MongoDB.
 
 ## Sketches
-* A wireframe was created using Invision and I will continue updating the app until final layout goals are met.
-![TRAVELMOIRE WIREFRAME](https://user-images.githubusercontent.com/103911002/172105053-0616ad60-e4c1-471f-8e84-ef0a5e1e899b.png)
+* A wireflow was created using Figma to layout the new design and I will continue updating the app until final layout goals are met.
+<img width="850" alt="TravelMoire Wireflow" src="https://user-images.githubusercontent.com/103911002/180390627-cde69642-9d91-46fe-be1f-dfd2a21e2afd.png">
 
  ## Next Steps
-* Mobile Friendly  
+* Mobile Friendly Design 
+* User sign in using google
+* Allow users to search for different cities
 * Add upload photo option 
 * User Authentication
-* Travel Recommendations
 * Expand CSS
 
+#### Follow the progress of TravelMoire [HERE.](https://trello.com/b/GGfcbJtX/travelmoire)
+
 ## Deployment [Project URL] 
-* [View the deployed app here] https://travelmoire.herokuapp.com/
+#### View the deployed app [HERE.](https://travelmoire.herokuapp.com/)
 
