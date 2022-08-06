@@ -14,11 +14,13 @@ TravelMoire is my first full CRUD project. My friends and I love to travel so th
 * MongoDB
 * Mongoose
 * Express.js
+* EJS
 * Node
 
 ## Features
 * This app is capable of creating, reading, editing, adding, and deleteing data.
-* Data is stored in collections using Postman and MongoDB.
+* Routes were tested using Postman
+* Data is stored in collections using MongoDB.
 
 ## Sketches
 * A wireframe was created using Invision and I will continue updating the app until final layout goals are met.
@@ -28,8 +30,7 @@ TravelMoire is my first full CRUD project. My friends and I love to travel so th
 * Mobile Friendly  
 * Add upload photo option 
 * User Authentication
-* Travel Recommendations
-* Expand CSS
+* Add CSS
 
 ## Deployment [Project URL] 
 * [View the deployed app here] https://travelmoire.herokuapp.com/

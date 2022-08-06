@@ -8,16 +8,12 @@ const app = express();
 const db = mongoose.connection;
 
 
-
 // REQUIRE ROUTER DEPENDENCIES 
 const entriesController = require('./controllers/entries.js');
 
 
-// const cloudinary = require('cloudinary');
-// const expressFileUpload = require('express-fileupload');
-
 // ALLOWS HEROKU'S PORT OR LOCAL PORT
-const { PORT = 3000, API_KEY, API_SECRET, CLOUD_NAME } = process.env;
+const { PORT = 3000 } = process.env;
 
 // MONGODB DATABASE CONNECTION
 const DATABASE_URL = "mongodb+srv://admin:abc1234@cluster0.b8vyj.mongodb.net/travelmoire?retryWrites=true&w=majority";
@@ -34,15 +30,6 @@ db.on('error', (err) => console.log(err.message + ' is mongod not running?'));
 db.on('connected', () => console.log('mongod connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongod disconnected'));
 
-// // CLOUDINARY MIDDLEWARE
-// cloudinary.config({ 
-//   cloud_name: CLOUD_NAME, 
-//   api_key: API_KEY, 
-//   api_secret: API_SECRET 
-// });
-
-// // FILE UPLOAD MIDDLEWARE
-// app.use(expressFileUpload({createParentPath: true}));
 
 // MIDDLEWARE AND BODYPARSER
 app.use(methodOverride('_method'));
