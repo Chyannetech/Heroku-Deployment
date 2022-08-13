@@ -19,8 +19,7 @@
 * Data is stored in collections using MongoDB.
 
 ## Sketches
-* A new wireflow was created using Figma to layout the new design and I will continue updating the app until final layout goals are met.
-<img width="850" alt="TravelMoire Wireflow" src="https://user-images.githubusercontent.com/103911002/180390627-cde69642-9d91-46fe-be1f-dfd2a21e2afd.png">
+
 
  ## Next Steps
 * Mobile Friendly Design 
