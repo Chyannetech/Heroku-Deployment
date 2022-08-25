@@ -13,9 +13,11 @@
 * Node
 
 ## MVP
-* Full CRUD (This app is capable of creating, reading, editing, adding, and deleteing data.)
-* Data is stored in collections using MongoDB.
-* CSS
+* At least 1 data entity (Model) that represents main function of application.
+* Full CRUD data operations on one data entry.
+* Utilize MongoDB and Mongoose to store data 
+* Use a CSS Stylesheet
+* Deploy online 
 
 ## Schema
 ```
