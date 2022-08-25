@@ -35,7 +35,7 @@ const entrySchema = new Schema({
 |May 29| Project Approval | Complete
 |May 30| Core Application Structure (HTML, CSS, etc.) | Complete
 |May 31| Schema and Routes | Complete
-|June 1-2| CSS Styling | MVP | Complete  | Complete
+|June 1-2| CSS Styling - MVP | Complete 
 |June 3| Presentations | Complete
 
 ## Sketches
