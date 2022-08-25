@@ -17,10 +17,47 @@
 ## MVP
 * Full CRUD (This app is capable of creating, reading, editing, adding, and deleteing data.)
 * Data is stored in collections using MongoDB.
-* Basic CSS
+* CSS
+
+## Schema
+```
+const entrySchema = new Schema({
+    location: String,
+    date: Date,
+    title: String,
+    body: String
+});
+```
+
+## Project Schedule
+
+|  Day | Deliverable | Status
+|---|---| ---|
+|May 28| Prompt / Wireframe / Timeframe | Complete
+|May 29| Project Approval | Complete
+|May 30| Core Application Structure (HTML, CSS, etc.) | Complete
+|May 31| Schema and Routes | Complete
+|June 1-2| CSS Styling | MVP | Complete  | Complete
+|June 3| Presentations | Complete
 
 ## Sketches
 ![TravelMoire WF](https://user-images.githubusercontent.com/103911002/186616415-fbc7f2fd-d17b-41dd-a7da-50c1bb709cfa.png)
+
+## Timeframes
+
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Prompt / Wireframe / Timeframe | H | 3hrs| 3hrs | 3hrs |
+| Create HTML, JS & CSS sheets and complete all needed integrations | H | 1hrs| 1hrs | 1hrs |
+| Create HTML Layout | H | 3hrs| 3hrs | 3hrs |
+| Pseudocode JS sheet | H | 1hrs| 0.5hrs | 0.5hrs |
+| Set up Schema and Connect to MongoDB | H | 3hrs| 2hrs | 2hrs |
+| Create and Test Routes| H | 3hrs| 3hrs | 3hrs |
+| Set up Views| H | 3hrs| 3hrs | 3hrs |
+| CSS Styling | H | 2hrs| 2hrs | 2hrs |
+| Review of Functionality | H | 2hrs| 1hrs | 1hrs |
+| Presentation Run Through | H | 1hrs| 1hrs | 1hrs |
+| Total | H | 22hrs| 19.5hrs | 19.5hrs |
 
  ## Post MVP
 * Mobile Friendly Design 
@@ -31,4 +68,14 @@
 
 ## Deployment [Project URL] 
 #### View the deployed app [here.](https://travelmoire.herokuapp.com/)
+
+## SWOT Analysis
+### Strengths:
+I knew what my goals were for reaching MVP and used my older projects as a reference to get things set up and functioning properly. 
+### Weaknesses:
+Properly executing methods in functional and class components is still an opportunity area. In addition, using the appropriate styling elements to have the application mirror the wireframes.
+### Opportunities:
+To reinforce all of the concepts learned in this unit and to familiarize myself further with tools such as  Material UI tools to assist with the design process.
+### Threats:
+Setting up the database and working with the routes took more time to complete than estimated. This placed me at risk of not meeting MVP by the deadline. There were many features and styling components that I wanted to incorporate but couldn't due to this delay. Furthermore, when encountering similar issues in the future, I would reach out to support resources to prevent being stuck for over an hour.
 
