@@ -28,7 +28,70 @@ const entrySchema = new Schema({
     body: String
 });
 ```
+## Controller
+```
+// INDEX
+router.get("/", (req, res) => {
+  Entry.find({}, (err, foundEntries) => {
+    res.render("entries/index.ejs", {
+      entries: foundEntries,
+    });
+  });
+});
 
+// NEW
+router.get("/new", (req, res) => {
+  res.render("entries/new.ejs");
+});
+
+// DELETE
+router.delete("/:id", (req, res) => {
+  Entry.findByIdAndDelete(req.params.id, (err, deletedEntry) => {
+    res.redirect("/entries");
+  });
+});
+
+// UPDATE
+router.put("/:id", (req, res) => {
+  Entry.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {
+      new: true,
+    },
+    (error, updatedEntry) => {
+      res.redirect(`/entries/${req.params.id}`);
+    }
+  );
+});
+
+// CREATE
+router.post("/", (req, res) => {
+  Entry.create(req.body, (err, createdEntry) => {
+    res.redirect("/entries");
+  });
+});
+// });
+
+// EDIT
+router.get("/:id/edit", (req, res) => {
+  Entry.findById(req.params.id, (err, foundEntry) => {
+    res.render("entries/edit.ejs", {
+      entry: foundEntry,
+    });
+  });
+});
+
+// SHOW
+router.get("/:id", (req, res) => {
+  Entry.findById(req.params.id, (err, foundEntry) => {
+    res.render("entries/show.ejs", {
+      entry: foundEntry,
+    });
+  });
+});
+
+```
 ## Project Schedule
 
 |  Day | Deliverable | Status
