@@ -90,8 +90,25 @@ router.get("/:id", (req, res) => {
     });
   });
 });
-
 ```
+## Index View
+```
+  <body>
+    <main>
+      <h2>Your Experiences</h2>
+      <!-- Shows Experiences/Entrees in a list as they are posted -->
+      <ul>
+        <% for(let i = 0; i < entries.length; i++){ %>
+      </ul>
+      <ul>
+        <!-- Grabs Entrees by ID and categorizes by location -->
+        <a href="/entries/<%= entries[i]._id %>"><%= entries[i].location %></a
+        ><% } %>
+      </ul>
+    </main>
+    <h4><a href="/entries/new">Create New Post</a></h4>
+  </body>
+ ```       
 ## Project Schedule
 
 |  Day | Deliverable | Status
