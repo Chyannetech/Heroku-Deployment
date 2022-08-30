@@ -146,6 +146,9 @@ router.get("/:id", (req, res) => {
 * Rebuild using React components to match new wireframe
 <img width="804" alt="TravelMoireWF" src="https://user-images.githubusercontent.com/103911002/186611637-4b97b32e-fb72-4a16-9cbf-64970f42fe25.png">
 
+* This is the link for the new repository built using React (W.I.P.)
+[Travel Moire Version 2](https://github.com/Chyannetech/TravelMoire-Frontend)
+
 ## Deployment [Project URL] 
 #### View the deployed app [here.](https://travelmoire.herokuapp.com/)
 
