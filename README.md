@@ -147,18 +147,10 @@ router.get("/:id", (req, res) => {
 <img width="804" alt="TravelMoireWF" src="https://user-images.githubusercontent.com/103911002/186611637-4b97b32e-fb72-4a16-9cbf-64970f42fe25.png">
 
 * This is the link for the new repository built using React (W.I.P.)
-[Travel Moire Version 2](https://github.com/Chyannetech/TravelMoire-Frontend)
+[Travel Moire Version 2](https://travelmoire2.herokuapp.com/)
 
 ## Deployment [Project URL] 
 #### View the deployed app [here.](https://travelmoire.herokuapp.com/)
 
-## SWOT Analysis
-### Strengths:
-I knew what my goals were for reaching MVP and used my older projects as a reference to get things set up and functioning properly. 
-### Weaknesses:
-Properly executing methods in functional and class components is still an opportunity area. In addition, using the appropriate styling elements to have the application mirror the wireframes.
-### Opportunities:
-To reinforce all of the concepts learned in this unit and to familiarize myself further with tools such as  Material UI tools to assist with the design process.
-### Threats:
-Setting up the database and working with the routes took more time to complete than estimated. This placed me at risk of not meeting MVP by the deadline. There were many features and styling components that I wanted to incorporate but couldn't due to this delay. Furthermore, when encountering similar issues in the future, I would reach out to support resources to prevent being stuck for over an hour.
+
 
